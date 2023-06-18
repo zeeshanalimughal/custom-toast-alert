@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+
+.alert__buttons_wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.alert__buttons_wrapper button {
+  max-width: 150px;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+.btn__success {
+  background-color: #54dc6e;
+}
+.btn__warning {
+  background-color: #f9c129;
+}
+.btn__danger {
+  background-color: #fa5657;
+}
+.btn__info {
+  background-color: #3384e3;
+}
+
+.alerts {
+  position: fixed;
+  top: 30px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px 30px;
+}
+.alerts .alert {
+  list-style: none;
+  width: 320px;
+  padding: 13px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(1000px) rotate(0deg);
+  transition: all 0.5s linear;
+}
+
+.alerts .alert.show {
+  transform: translateX(0) rotate(0deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+.alerts .alert.hide {
+  transform: translateX(1000px) !important;
+}
+
+.alerts .alert i {
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.alerts .alert ion-icon {
+  font-size: 22px !important;
+}
+.alerts .alert .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.alerts .alert.alert__success,
+.alerts .alert.alert__success i {
+  background-color: rgba(241, 255, 244, 0.8);
+  border: 1px solid #54dc6e;
+  color: #32a046;
+}
+.alerts .alert.alert__warning,
+.alerts .alert.alert__warning i {
+  background-color: rgba(255, 251, 240, 0.8);
+  border: 1px solid #f9c129;
+  color: #bb8f14;
+}
+.alerts .alert.alert__danger,
+.alerts .alert.alert__danger i {
+  background-color: rgba(255, 243, 243, 0.8);
+  border: 1px solid #fa5657;
+  color: #c43b3b;
+}
+.alerts .alert.alert__info,
+.alerts .alert.alert__info i {
+  background-color: rgba(243, 248, 255, 0.8);
+  border: 1px solid #3384e3;
+  color: #226bbe;
+}
+
+.icon__success {
+  color: #54dc6e !important;
+}
+.icon__warning {
+  color: #f9c129;
+}
+.icon__danger {
+  color: #fa5657;
+}
+.icon__info {
+  color: #3384e3;
+}
